@@ -1,0 +1,10 @@
+h3 {
+    color: blue;
+}
+
+:host{
+    .background-red{
+        background-color: red;
+        color: white;
+    }
+}

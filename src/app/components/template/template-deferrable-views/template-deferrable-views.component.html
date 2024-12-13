@@ -1,0 +1,21 @@
+<!-- 
+on interaction (Clique, Focus e afins)
+on viewport - começa so quando o commponente aparece na tela 
+on idle - assim que a pagina é carregada
+on hover - quando o mouse passar em cima
+on immediate - espera carregar as coisas para funcionar
+prefetch - deixa carregado antes de carregar a tela inteira, da pra combinar com outras propriedades
+-->
+
+<h2>Deferrable Views</h2>
+<button (click)="isTrue = true"> Add True </button>
+
+@defer () {
+    <app-new-component />
+} @placeholder(minimum 5s) {
+    <p>Mostrar antes de carregar algo.</p>
+} @loading ( minimum 5s) {
+    <p>Loading...</p>
+} @error {
+    <p>Loading Failed</p>
+}
